@@ -1,9 +1,9 @@
 /*
 * This program makes an hourglass.
 *
-* @author  Jonathan Pasco-Arnone
+* @author  Peter Gemmell
 * @version 1.0
-* @since   2021-12-15
+* @since   
 */
 
 import java.util.Scanner;
