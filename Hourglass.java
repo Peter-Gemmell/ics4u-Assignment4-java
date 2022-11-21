@@ -3,7 +3,7 @@
 *
 * @author  Peter Gemmell
 * @version 1.0
-* @since   
+* @since 11/06/1982 
 */
 
 import java.util.Scanner;
@@ -34,23 +34,23 @@ final class Hourglass {
     * @param sand the amount of sand in the hourglass
     * @param centre the amount of extra spaces to centre the sand
     */
-    static void hourglass(final int sand, final int centre) {
-        String hourglassStr = "";
+    static void hourglass(final int integer, final int spacesNum) {
+        String output = "";
         int counter1;
         int counter2;
-        for (counter1 = 0; counter1 < centre; counter1++) {
-            hourglassStr += " ";
+        for (counter1 = 0; counter1 < spacesNum; counter1++) {
+            output += " ";
         }
 
-        for (counter2 = 0; counter2 < sand; counter2++) {
-            hourglassStr += "* ";
+        for (counter2 = 0; counter2 < integer; counter2++) {
+            output += "* ";
         }
-        System.out.println(hourglassStr);
+        System.out.println(output);
 
-        if (sand > 1) {
-            hourglass(sand - 1, centre + 1);
+        if (integer > 1) {
+            hourglass(integer - 1, spacesNum + 1);
         }
-        System.out.println(hourglassStr);
+        System.out.println(output);
     }
 
     /**
@@ -66,11 +66,11 @@ final class Hourglass {
         System.out.print("Insert height of hourglass: ");
 
         try {
-            final int sandInput = userInput.nextInt();
+            final int inputNum = userInput.nextInt();
             System.out.println();
-            if (sandInput > 1) {
+            if (inputNum > 1) {
                 // process
-                hourglass(sandInput, 0);
+                hourglass(inputNum, 0);
             } else {
                 System.out.println(invalidInputStr);
             }
