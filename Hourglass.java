@@ -3,7 +3,7 @@
 *
 * @author  Peter Gemmell
 * @version 1.0
-* @since 11/06/1982 
+* @since 11/06/1982
 */
 
 import java.util.Scanner;
@@ -31,8 +31,8 @@ final class Hourglass {
     /**
     * Creates the hourglass.
     *
-    * @param sand the amount of sand in the hourglass
-    * @param centre the amount of extra spaces to centre the sand
+    * @param integer the amount of sand in the hourglass
+    * @param spacesNum the amount of extra spaces to centre the sand
     */
     static void hourglass(final int integer, final int spacesNum) {
         String output = "";
@@ -59,7 +59,6 @@ final class Hourglass {
     * @param args this will not be used
     */
     public static void main(final String[] args) {
-        final String invalidInputStr = "\nInvalid Input";
 
         // input
         final Scanner userInput = new Scanner(System.in);
@@ -72,10 +71,11 @@ final class Hourglass {
                 // process
                 hourglass(inputNum, 0);
             } else {
-                System.out.println(invalidInputStr);
+                System.out.println("Not an Integer");
             }
         } catch (java.util.InputMismatchException ex) {
-            System.err.print(invalidInputStr);
+            System.err.println("\nNot a number");
         }
+        System.out.println("\nDone.");
     }
 }
